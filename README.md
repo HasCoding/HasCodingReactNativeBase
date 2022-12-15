@@ -4,7 +4,7 @@
 
 1. Bir klasör oluşturun `mkdir <FolderName>`
 2. Klasörün içine girin `cd <FolderName>`
-3. Repository'yi klonlayın (git clone https://github.com/HasCoding/HasCodingReactBase.git .).
+3. Repository'yi klonlayın (`git clone https://github.com/HasCoding/HasCodingReactNativeBase.git .`).
 4. `npm install` yazarak gerekli modülleri kurun.
 5. `npm run android` veya `npm run ios` yazarak başlatın.
 
