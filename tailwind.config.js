@@ -7,7 +7,11 @@ module.exports = {
     "./App.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+          "hascoding": "#138ec7"
+        }
+    },
   },
   plugins: [],
 }

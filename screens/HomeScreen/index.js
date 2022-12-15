@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import AppHomeScreen from "./AppHomeScreen";
-import AboutScreen from "./AboutScreen";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-const HomeScreenLayout = () => {
+import SettingsScreen from "./SettingsScreen";
+import HomeScreenLayout from "./Home";
+const HomeBaseLayout = () => {
 
     const Tab = createBottomTabNavigator();
 
@@ -15,7 +15,7 @@ const HomeScreenLayout = () => {
                 headerShown: false
             }}
         >
-            <Tab.Screen name="AppHome" component={AppHomeScreen}
+            <Tab.Screen name="AppHome" component={HomeScreenLayout}
                 options={{
                     title: 'Ana Sayfa',
                     tabBarIcon: ({ color, size }) => (
@@ -24,11 +24,11 @@ const HomeScreenLayout = () => {
                 }}
             />
 
-            <Tab.Screen name="About" component={AboutScreen}
+            <Tab.Screen name="Settings" component={SettingsScreen}
                 options={{
-                    title: 'Hakkında',
+                    title: 'Ayarlar',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons name="info" size={size} color={color} />
+                        <MaterialIcons name="build-circle" size={size} color={color} />
                     ),
                 }}
             />
@@ -36,4 +36,4 @@ const HomeScreenLayout = () => {
     );
 };
 
-export default HomeScreenLayout;
+export default HomeBaseLayout;
